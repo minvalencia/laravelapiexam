@@ -64,3 +64,22 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Requirements
+
+Mysql 8.0.13
+PHP 8.1.6
+
+## How to use API
+Customer
+- create post api.test/api/customers no token required, parameters email, password, firstname, lastname
+- show get api.test/api/customers token required
+- update post api.test/api/customers/{id} token required, parameters email, password, firstname, lastname, method
+- delete post api.test/api/customers/{id} token required, parameters email, password, firstname, lastname, method
+- show get api.test/api/customers/{id}/cars token required
+- login api.test/api/login no token required, parameters email, password
+
+Cars
+- create post api.test/api/cars token required, parameters customer_id, name, model
+- update post api.test/api/cars/{id} token required, parameters customer_id, name, model, method
+- delete post api.test/api/cars/{id} token required, parameters customer_id, name, model, method
